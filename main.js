@@ -1,15 +1,15 @@
-const forms = document.querySelectorAll('form')
-const submitBtn = document.querySelector('button')
-submitBtn.addEventListener('click', submitForm)
-function submitForm() {
-  console.log(forms)
+const forms = document.querySelectorAll('form') // 获取所有表单
+const submitBtn = document.querySelector('button') // 获取提交按钮
+submitBtn.addEventListener('click', submitForm) // 给提交按钮添加点击事件
+function submitForm() { // 根据表单书籍计算分数
+  // 定义各个维度的分数和总分
   let score1 = 0
   let score2 = 0
   let score3 = 0
   let score4 = 0
   let totalScore = 0
-  for (let i = 0; i < forms.length; i++) {
-    
+  // 遍历所有表单，分维度求和
+  for (let i = 0; i < forms.length; i++) { 
     if (i < 5) {
       score1 += +forms[i].querySelector('input:checked').value
     } else if (i < 9) {
@@ -20,12 +20,13 @@ function submitForm() {
       score4 += +forms[i].querySelector('input:checked').value
     }
   }
+  // 计算总分和各个维度的标准分
   totalScore = ((score1 + score2 + score3 + score4) / 18 - 4.40) / 0.58
   score1 = (score1 / 5 - 3.13) / 1.15
   score2 = (score2 / 4 - 5.35) / 0.96
   score3 = (score3 / 5 - 5.35) / 0.83
   score4 = (score4 / 4 - 3.85) / 1.20
-  console.log(totalScore, score1, score2, score3, score4)
+  // 弹出提示框
   alert(`
     在在校学生这一群体中
     您的内卷程度总分超过了${Math.round(fromZtoP(totalScore))}%的人
