@@ -29,7 +29,7 @@ function submitForm() { // 根据表单书籍计算分数
   // 弹出提示框
   alert(`
     在在校学生这一群体中
-    您的内卷程度总分超过了${Math.round(fromZtoP(totalScore))}%的人
+    您感知到的内卷程度超过了${Math.round(fromZtoP(totalScore))}%的人
     其中：
     心理压力维度：超过了${Math.round(fromZtoP(score1))}%的人
     社会规范维度：超过了${Math.round(fromZtoP(score2))}%的人
