@@ -22,12 +22,10 @@ html {
 .container {
   width: 100%;
   max-width: 800px;
-  min-width: 540px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   padding: 2rem;
 }
-
 
 header {
   text-align: center;
@@ -110,4 +108,17 @@ footer button:hover {
 }
 footer button:active {
   transform: scale(0.95);
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 2rem 0;
+  }
+  section form span {
+    width: 5rem;
+    font-size: 0.8rem;
+  }
+  section > p {
+    padding: 0 1.5rem;
+  }
 }
