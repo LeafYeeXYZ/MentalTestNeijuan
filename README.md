@@ -1,4 +1,4 @@
-# 内卷感知测量问卷 / A Measurement Tool to Validate the Multiple Characteristic Dimensions of Neijuan in Chinese Culture
+# 内卷感知测量问卷
 
 # 参考文献 / Reference
 
